@@ -21,6 +21,7 @@ either by an RC switch (manual) or a `DO_GRIPPER` mission command (autonomous).
 | `scripts/launch_sitl.sh` | Launches ArduCopter SITL with this build's params pre-loaded |
 | `scripts/smoke_test.py` | pymavlink script: arms, flies the demo mission, verifies gripper fires |
 | `docs/sitl_setup.md` | One-time environment setup (WSL2 + ArduPilot build) |
+| `docs/windows_manual_control.md` | Fly the sim from Windows with an Xbox controller + Mission Planner |
 | `docs/hardware.md` | Wiring notes tying the parts list to the param file |
 
 ## Quick start
@@ -28,7 +29,7 @@ either by an RC switch (manual) or a `DO_GRIPPER` mission command (autonomous).
 1. Follow [`docs/sitl_setup.md`](docs/sitl_setup.md) once, to install ArduPilot's SITL toolchain.
 2. `./scripts/launch_sitl.sh` — starts SITL with `params/quad-x-3508-650.param` loaded.
 3. In another terminal: `python scripts/smoke_test.py` — arms, runs the demo mission, confirms the gripper releases at the drop waypoint.
-4. Or load `missions/bait-drop-demo.waypoints` into Mission Planner / QGroundControl connected to the SITL instance and fly it manually.
+4. To fly it yourself: follow [`docs/windows_manual_control.md`](docs/windows_manual_control.md) — connects Mission Planner (Windows) to SITL (WSL2) and sets up an Xbox controller as a virtual transmitter.
 
 ## Roadmap (once the physical airframe is built)
 
